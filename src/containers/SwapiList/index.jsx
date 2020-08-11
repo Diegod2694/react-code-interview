@@ -1,11 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
-const SwapiList = () => {
-    return (
-        <div>
-            
-        </div>
-    )
+const SwapiList = (props) => {
+    return <ul>
+         {
+            props.data.map(e => {
+                return (
+                    <li key={e.name}>
+                       <p>name: {e.name} / height: {e.height}</p>
+                    </li>
+                )
+            })
+         }
+    </ul>
 }
 
 export default SwapiList

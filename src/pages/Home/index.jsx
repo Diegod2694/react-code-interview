@@ -2,11 +2,13 @@ import React from 'react'
 import Header from '../../components/Header';
 import SwapiList from '../../containers/SwapiList';
 
-const Home = () => {
+const Home = (props) => {
     return (
         <React.Fragment>
           <Header />
-          <SwapiList />
+          <SwapiList data={props.data} />
+          <button onClick={() => props.goToPreviousPage()}>Back</button>
+          <button onClick={() => props.goToNextPage()}>Next</button>
         </React.Fragment>
     )
 }
